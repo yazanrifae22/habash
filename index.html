@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Habash Med | Ophthalmic Solutions</title>
-    <meta name="description" content="Habash Med - Delivering Excellence in Vision and Ophthalmic Solutions in Syria." />
+    <meta
+      name="description"
+      content="Habash Med - Delivering Excellence in Vision and Ophthalmic Solutions in Syria."
+    />
+    <!-- Tailwind Play CDN (OK for now, later you can move to a proper build setup) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -19,13 +23,13 @@
                 700: '#0369a1',
                 800: '#075985',
                 900: '#0c4a6e', // Deep blue
-              }
+              },
             },
             fontFamily: {
               sans: ['Inter', 'system-ui', 'sans-serif'],
             },
             animation: {
-              'float': 'float 6s ease-in-out infinite',
+              float: 'float 6s ease-in-out infinite',
               'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
             },
             keyframes: {
@@ -36,11 +40,11 @@
               fadeInUp: {
                 '0%': { opacity: '0', transform: 'translateY(20px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
-              }
-            }
-          }
-        }
-      }
+              },
+            },
+          },
+        },
+      };
     </script>
     <style>
       /* Custom styles for 3D effects and Glassmorphism */
@@ -49,22 +53,23 @@
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
       }
-      
+
       .perspective-1000 {
         perspective: 1000px;
       }
-      
+
       .transform-style-3d {
         transform-style: preserve-3d;
       }
-      
+
       .card-3d-hover {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-      
+
       .card-3d-hover:hover {
         transform: translateY(-5px) rotateX(2deg);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
       }
 
       /* Smooth scrolling */
@@ -72,19 +77,271 @@
         scroll-behavior: smooth;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
-  }
-}
-</script>
-</head>
-  <body>
-    <div id="root"></div>
+  </head>
+  <body class="min-h-screen bg-brand-900 text-white font-sans">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-20 bg-brand-900/90 border-b border-white/10 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <!-- Replace this with your logo image if you want -->
+          <div
+            class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center font-bold text-xl"
+          >
+            H
+          </div>
+          <div>
+            <div class="font-semibold text-lg">Habash Med</div>
+            <div class="text-xs text-brand-100">
+              Ophthalmic &amp; Vision Solutions
+            </div>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-brand-100">
+          <a href="#home" class="hover:text-white">Home</a>
+          <a href="#products" class="hover:text-white">Products</a>
+          <a href="#about" class="hover:text-white">About</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+        </nav>
+
+        <a
+          href="#contact"
+          class="hidden md:inline-flex px-4 py-2 rounded-full bg-brand-500 hover:bg-brand-600 text-sm font-medium shadow-lg"
+        >
+          Contact Sales
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main id="home" class="max-w-6xl mx-auto px-4 pt-10 pb-16">
+      <section class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <span
+            class="inline-flex items-center px-3 py-1 rounded-full bg-brand-800/70 text-xs font-medium border border-brand-500/40"
+          >
+            Trusted Ophthalmic Partner in Syria
+          </span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            Precision Ophthalmic
+            <span class="text-brand-200">Solutions</span> for Better Vision
+          </h1>
+          <p class="text-brand-100 text-sm md:text-base leading-relaxed">
+            Habash Med delivers high-quality ophthalmic products and devices,
+            supporting clinics, hospitals, and eye-care professionals with
+            reliable, clinically proven solutions.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="#products"
+              class="px-5 py-2.5 rounded-full bg-brand-500 hover:bg-brand-600 text-sm font-medium shadow-lg"
+            >
+              View Products
+            </a>
+            <a
+              href="#contact"
+              class="px-5 py-2.5 rounded-full border border-white/30 text-sm font-medium hover:bg-white/5"
+            >
+              Talk to Our Team
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-4 pt-4 text-xs md:text-sm">
+            <div>
+              <div class="text-xl font-bold">10+</div>
+              <div class="text-brand-100">Years in eye-care supply</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold">100+</div>
+              <div class="text-brand-100">Clinics &amp; centers served</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold">24/7</div>
+              <div class="text-brand-100">Support for key partners</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card / Illustration -->
+        <div
+          class="relative perspective-1000 mt-6 md:mt-0 flex items-center justify-center"
+        >
+          <div
+            class="glass card-3d-hover transform-style-3d rounded-2xl p-6 md:p-8 max-w-md w-full border border-white/20"
+          >
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-lg font-semibold text-brand-900">
+                Ophthalmic Portfolio
+              </h2>
+              <span
+                class="px-3 py-1 rounded-full bg-brand-100 text-xs font-medium text-brand-800"
+                >Habash Med</span
+              >
+            </div>
+
+            <div class="space-y-4 text-sm text-brand-800">
+              <div class="flex items-start gap-3">
+                <div
+                  class="mt-1 w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-700 text-xs font-semibold"
+                >
+                  01
+                </div>
+                <div>
+                  <div class="font-semibold">Intraocular Solutions</div>
+                  <p class="text-brand-700/80">
+                    High-quality solutions designed to support safe,
+                    predictable ophthalmic procedures.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="mt-1 w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-700 text-xs font-semibold"
+                >
+                  02
+                </div>
+                <div>
+                  <div class="font-semibold">Diagnostic &amp; Surgical</div>
+                  <p class="text-brand-700/80">
+                    Reliable products for clinics and hospitals focused on
+                    precision and patient safety.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="mt-1 w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-700 text-xs font-semibold"
+                >
+                  03
+                </div>
+                <div>
+                  <div class="font-semibold">Partnership &amp; Support</div>
+                  <p class="text-brand-700/80">
+                    Local presence in Syria with responsive support and
+                    long-term strategic partnerships.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center justify-between text-xs">
+              <span class="text-brand-700/80">Based in Syria</span>
+              <span class="font-medium text-brand-800"
+                >Excellence in Vision</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="absolute -top-6 -right-4 w-20 h-20 rounded-3xl bg-brand-500/50 blur-xl animate-float"
+          ></div>
+        </div>
+      </section>
+
+      <!-- PRODUCTS SECTION -->
+      <section id="products" class="mt-16 md:mt-20">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Key Product Lines</h2>
+        <p class="text-brand-100 text-sm md:text-base mb-8 max-w-2xl">
+          A focused ophthalmic portfolio designed to meet the needs of
+          specialists, clinics, and hospitals across Syria.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="glass rounded-2xl p-5 border border-white/10 card-3d-hover">
+            <h3 class="font-semibold text-lg mb-2">Ophthalmic Solutions</h3>
+            <p class="text-sm text-brand-800/80 mb-3">
+              Sterile ophthalmic solutions formulated for safety and
+              consistency.
+            </p>
+            <ul class="text-xs text-brand-800/90 space-y-1">
+              <li>• High-purity formulations</li>
+              <li>• Clinic and hospital use</li>
+              <li>• Stable, reliable supply chain</li>
+            </ul>
+          </div>
+
+          <div class="glass rounded-2xl p-5 border border-white/10 card-3d-hover">
+            <h3 class="font-semibold text-lg mb-2">Diagnostic Support</h3>
+            <p class="text-sm text-brand-800/80 mb-3">
+              Products that support precise diagnosis and monitoring of
+              eye conditions.
+            </p>
+            <ul class="text-xs text-brand-800/90 space-y-1">
+              <li>• Designed for ophthalmic workflows</li>
+              <li>• Compatible with leading equipment</li>
+              <li>• Focused on accuracy &amp; comfort</li>
+            </ul>
+          </div>
+
+          <div class="glass rounded-2xl p-5 border border-white/10 card-3d-hover">
+            <h3 class="font-semibold text-lg mb-2">Partnership Programs</h3>
+            <p class="text-sm text-brand-800/80 mb-3">
+              Close collaboration with clinics, hospitals, and distributors
+              in Syria.
+            </p>
+            <ul class="text-xs text-brand-800/90 space-y-1">
+              <li>• Long-term supply partnerships</li>
+              <li>• Dedicated relationship management</li>
+              <li>• Tailored support for key accounts</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="mt-16 md:mt-20">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">About Habash Med</h2>
+        <p class="text-brand-100 text-sm md:text-base max-w-3xl leading-relaxed">
+          Habash Med is committed to supporting ophthalmologists, optometrists,
+          and healthcare institutions with trusted ophthalmic solutions. With a
+          strong local presence in Syria, we focus on quality, reliability, and
+          long-term partnerships that enable better patient outcomes and
+          sustainable growth for our partners.
+        </p>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="mt-16 md:mt-20 mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Contact</h2>
+        <p class="text-brand-100 text-sm md:text-base mb-6 max-w-2xl">
+          For partnership inquiries, product information, or distribution
+          opportunities in Syria, please reach out using the details below.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="glass rounded-2xl p-5 border border-white/10 text-sm text-brand-800/90">
+            <h3 class="font-semibold mb-2">Business Contact</h3>
+            <p>Habash Med</p>
+            <p>Syria</p>
+            <p class="mt-2">Email: <span class="font-mono">[add-email-here]</span></p>
+            <p>Phone: <span class="font-mono">[add-phone-here]</span></p>
+          </div>
+
+          <div class="glass rounded-2xl p-5 border border-white/10 text-sm text-brand-800/90">
+            <h3 class="font-semibold mb-2">Message</h3>
+            <p class="text-xs mb-3">
+              You can also integrate a contact form here (e.g., using Formspree,
+              Netlify Forms, or a custom backend).
+            </p>
+            <ul class="text-xs space-y-1 list-disc list-inside">
+              <li>Name &amp; clinic / organization</li>
+              <li>Contact details</li>
+              <li>Type of inquiry (products, partnership, distribution, etc.)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-4 text-center text-xs text-brand-100">
+      © <span id="year"></span> Habash Med. All rights reserved.
+    </footer>
+
+    <script>
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
