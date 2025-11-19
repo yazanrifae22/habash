@@ -58,33 +58,32 @@ const Home: React.FC = () => {
               </div>
               
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight">
-                The Future of <br />
-                {/* High visibility gradient text */}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-cyan-300 drop-shadow-[0_0_35px_rgba(34,211,238,0.6)] pb-2 block sm:inline">
-                  Vision Care
+                Upgrade Your <br />
+                {/* High visibility gradient text with shimmering movement */}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-cyan-300 drop-shadow-[0_0_35px_rgba(34,211,238,0.6)] pb-2 block sm:inline bg-[length:200%_auto] animate-shimmer">
+                  Practice Today
                 </span>
               </h1>
               
               <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
-                Empowering Syria's eye-care professionals with precision technology. 
-                Experience the perfect synergy of innovation and reliability with Habash Med.
+                Join the leading ophthalmologists in Syria who trust Habash Med for precision, reliability, and excellence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                 <Link 
-                  to="/products" 
+                  to="/contact" 
                   className="group relative px-8 py-4 bg-brand-600 rounded-full overflow-hidden shadow-[0_0_30px_rgba(14,165,233,0.4)] hover:shadow-[0_0_50px_rgba(14,165,233,0.6)] transition-all duration-300"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
                   <span className="relative font-bold text-white flex items-center justify-center">
-                    Explore Catalogue <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    Request Consultation <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
                 <Link 
-                  to="/contact" 
+                  to="/products" 
                   className="px-8 py-4 rounded-full border border-slate-700 text-slate-300 font-semibold hover:bg-white/5 hover:text-white hover:border-white transition-all backdrop-blur-sm"
                 >
-                  Contact Sales
+                  Explore Catalogue
                 </Link>
               </div>
 
@@ -242,47 +241,124 @@ const Home: React.FC = () => {
       </section>
 
       {/* Modern CTA */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="relative rounded-[3rem] overflow-hidden bg-gradient-to-br from-brand-600 to-sky-900 text-white shadow-2xl shadow-brand-500/25 border border-brand-500/20">
-            {/* Abstract Shapes */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-               <div className="absolute top-[-50%] left-[-10%] w-[80%] h-[150%] bg-white/10 rounded-[40%] rotate-12 blur-[80px]"></div>
-               <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[100%] bg-cyan-400/20 rounded-full blur-[100px]"></div>
-               {/* Grid Pattern Overlay */}
-               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+      <section className="py-20 lg:py-32 relative overflow-hidden">
+        {/* Background decoration to blend section */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white pointer-events-none"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="group relative rounded-[2.5rem] overflow-hidden bg-slate-900 text-white shadow-2xl shadow-brand-900/40 transition-all duration-500 hover:shadow-brand-500/30 hover:-translate-y-1 border border-white/10">
+            
+            {/* Animated Background Layers */}
+            <div className="absolute inset-0 overflow-hidden">
+              {/* Base Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900"></div>
+              
+              {/* Moving Blobs */}
+              <div className="absolute -top-[40%] -left-[20%] w-[80%] h-[100%] bg-brand-500/20 rounded-full blur-[100px] animate-float"></div>
+              <div className="absolute top-[20%] -right-[20%] w-[70%] h-[100%] bg-cyan-500/20 rounded-full blur-[120px] animate-float" style={{ animationDelay: '2s' }}></div>
+              
+              {/* Tech Grid Pattern */}
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)]"></div>
             </div>
             
-            <div className="relative z-10 grid md:grid-cols-2 gap-16 items-center p-12 md:p-24">
-              <div>
-                <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
-                  Upgrade Your <br/>
-                  <span className="text-cyan-200 drop-shadow-md">Practice Today</span>
+            {/* Content */}
+            <div className="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center p-10 md:p-16 lg:p-20">
+              
+              {/* Left: Text & CTA */}
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-brand-300 text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-sm">
+                  <span className="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                  Next Generation Care
+                </div>
+                
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
+                  Future-Proof Your <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-brand-300 animate-shimmer bg-[length:200%_auto]">
+                    Medical Practice
+                  </span>
                 </h2>
-                <p className="text-lg text-sky-100 mb-10 leading-relaxed max-w-md font-medium">
-                  Join the leading ophthalmologists in Syria who trust Habash Med for precision, reliability, and excellence.
+                
+                <p className="text-lg text-slate-400 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
+                  Partner with Habash Med to access cutting-edge ophthalmic technology. We deliver precision, reliability, and comprehensive support.
                 </p>
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center bg-white text-brand-700 font-bold py-4 px-10 rounded-full hover:bg-brand-50 transition-all transform hover:-translate-y-1 shadow-xl shadow-black/10"
-                >
-                  Request Consultation <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                   <Link 
+                    to="/contact" 
+                    className="group relative overflow-hidden bg-brand-500 text-white font-bold py-4 px-10 rounded-full transition-all hover:scale-105 shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:shadow-[0_0_40px_rgba(14,165,233,0.5)]"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                    <span className="flex items-center justify-center gap-2 relative z-10">
+                      Start Consultation <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </Link>
+                </div>
               </div>
-              <div className="relative h-80 flex items-center justify-center">
-                 {/* Decorative Tech Circle */}
-                 <div className="w-80 h-80 rounded-full border border-white/20 relative flex items-center justify-center animate-[spin_30s_linear_infinite]">
-                    <div className="absolute inset-0 rounded-full border-t-2 border-white/40"></div>
+
+              {/* Right: Interactive Graphic */}
+              <div className="relative flex items-center justify-center perspective-1000">
+                 {/* Glass Card */}
+                 <div className="relative w-full max-w-md bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 flex flex-col justify-between shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-brand-500/20">
+                    {/* Decorative header within card */}
+                    <div className="flex items-center justify-between mb-8">
+                       <div className="flex gap-2">
+                          <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+                          <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                          <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
+                       </div>
+                       <div className="h-1 w-20 bg-white/10 rounded-full"></div>
+                    </div>
+
+                    {/* Stats / Graphic Content */}
+                    <div className="space-y-4">
+                       {/* Stat Bar 1 */}
+                       <div className="bg-white/5 rounded-xl p-4 flex items-center gap-4 border border-white/5 hover:bg-white/10 transition-colors group/stat">
+                          <div className="w-12 h-12 rounded-lg bg-brand-500/20 flex items-center justify-center text-brand-300 group-hover/stat:scale-110 transition-transform">
+                             <Activity className="w-6 h-6" />
+                          </div>
+                          <div>
+                             <div className="text-2xl font-bold text-white">15+</div>
+                             <div className="text-xs text-slate-400 uppercase tracking-wider">Major Clinics</div>
+                          </div>
+                       </div>
+
+                       {/* Stat Bar 2 */}
+                       <div className="bg-white/5 rounded-xl p-4 flex items-center gap-4 border border-white/5 hover:bg-white/10 transition-colors group/stat">
+                          <div className="w-12 h-12 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-300 group-hover/stat:scale-110 transition-transform">
+                             <Shield className="w-6 h-6" />
+                          </div>
+                          <div>
+                             <div className="text-2xl font-bold text-white">100%</div>
+                             <div className="text-xs text-slate-400 uppercase tracking-wider">Service Uptime</div>
+                          </div>
+                       </div>
+                    </div>
+
+                    {/* Bottom Chart Simulation */}
+                    <div className="mt-6 flex items-end justify-between gap-2 h-24 px-2">
+                       {[40, 70, 45, 90, 65, 85, 100].map((h, i) => (
+                          <div key={i} className="w-full bg-white/5 rounded-t-sm relative overflow-hidden h-full flex items-end">
+                             <div className="w-full bg-gradient-to-t from-brand-600 to-cyan-400 animate-pulse" style={{ height: `${h}%`, animationDelay: `${i * 100}ms`, animationDuration: '3s' }}></div>
+                          </div>
+                       ))}
+                    </div>
                  </div>
-                 <div className="absolute w-64 h-64 rounded-full border border-white/20 flex items-center justify-center animate-[spin_20s_linear_infinite_reverse]">
-                    <div className="absolute inset-0 rounded-full border-b-2 border-cyan-300/40"></div>
-                 </div>
-                 <div className="absolute w-40 h-40 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-                 <div className="absolute text-center">
-                    <div className="text-5xl font-bold text-white mb-2 drop-shadow-lg">15+</div>
-                    <div className="text-sm text-cyan-200 uppercase tracking-widest font-semibold">Major Clinics</div>
+
+                 {/* Floating Elements behind/around card */}
+                 <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-brand-500/20 rounded-full blur-[100px]"></div>
+                 
+                 {/* Floating Badge */}
+                 <div className="absolute -right-4 -top-4 md:right-0 md:top-0 bg-slate-800 p-3 rounded-xl shadow-xl border border-slate-700 animate-float">
+                    <div className="flex items-center gap-3">
+                       <div className="relative flex h-3 w-3">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                       </div>
+                       <span className="text-xs font-bold text-white">System Active</span>
+                    </div>
                  </div>
               </div>
+
             </div>
           </div>
         </div>
