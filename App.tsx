@@ -13,12 +13,19 @@ const App: React.FC = () => {
     <HashRouter>
       <Layout>
         <Routes>
+          {/* Home */}
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />   {/* 👈 ADD THIS LINE */}
+
+          {/* Other pages */}
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/contact" element={<Contact />} />
+
+          {/* Optional: fallback route – send unknown paths to Home */}
+          {/* <Route path="*" element={<Home />} /> */}
         </Routes>
       </Layout>
     </HashRouter>
