@@ -1,6 +1,5 @@
+import { Activity, Eye, Heart, Shield, Target } from 'lucide-react';
 import React from 'react';
-import { TEAM_MEMBERS } from '../constants';
-import { Target, Eye, Heart, Shield, Activity } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -97,28 +96,6 @@ const About: React.FC = () => {
               <p className="text-sm text-slate-600">Adapting tailored solutions to the specific needs of every client.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-brand-900 text-center mb-12">Meet Our Team</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {TEAM_MEMBERS.map((member, index) => (
-            <div key={index} className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all">
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src={member.imageUrl} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-brand-900">{member.name}</h3>
-                <p className="text-brand-500 font-medium mt-1">{member.role}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
     </div>
