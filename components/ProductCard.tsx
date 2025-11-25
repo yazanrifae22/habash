@@ -1,7 +1,7 @@
+import { ArrowRight, Eye, Sparkles } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Product } from '../types';
-import { ArrowRight, Eye, Sparkles } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="relative z-10 w-full h-full flex items-center justify-center">
            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
            <img
-             src={product.imageUrl}
+             src={product.images[0] || `https://picsum.photos/seed/${product.id}/500/400`}
              alt={product.model}
              className="max-h-full max-w-full object-contain transition-transform duration-700 cubic-bezier(0.34, 1.56, 0.64, 1) group-hover:scale-110 group-hover:-rotate-2 drop-shadow-sm group-hover:drop-shadow-xl"
            />

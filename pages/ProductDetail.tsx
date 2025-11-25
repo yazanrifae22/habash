@@ -1,11 +1,12 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { ArrowLeft, CheckCircle2, FileText, Home, Phone, Share2, ShieldCheck, Truck } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { PRODUCTS } from '../constants';
-import { ArrowLeft, CheckCircle2, Phone, ShieldCheck, FileText, Truck, Share2, Home } from 'lucide-react';
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const product = PRODUCTS.find(p => p.id === id);
+  const [selectedImage, setSelectedImage] = useState(0);
 
   if (!product) {
     return (
@@ -20,6 +21,8 @@ const ProductDetail: React.FC = () => {
       </div>
     );
   }
+
+  const mainImage = product.images[selectedImage] || product.images[0] || `https://picsum.photos/seed/${product.id}/500/400`;
 
   return (
     <div className="bg-slate-50 min-h-screen font-sans">
@@ -61,33 +64,59 @@ const ProductDetail: React.FC = () => {
                {/* Radial Gradient Background */}
                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,white_0%,transparent_70%)]"></div>
                
+               {/* Main Image */}
                <div className="relative z-10 flex-grow flex items-center justify-center py-10">
                   <img 
-                    src={product.imageUrl} 
+                    src={mainImage}
                     alt={product.model} 
-                    className="max-w-full max-h-[400px] object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-105"
+                    className="product-main-image max-w-full max-h-[400px] object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-105"
                   />
                </div>
+               
+               {/* Image Gallery Thumbnails */}
+               {product.images.length > 1 && (
+                 <div className="relative z-10 mt-6">
+                   <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                     {product.images.map((image, index) => (
+                       <button
+                         key={index}
+                         onClick={() => setSelectedImage(index)}
+                         className={`flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-200 bg-white ${
+                           selectedImage === index 
+                             ? 'border-brand-500 ring-2 ring-brand-200' 
+                             : 'border-slate-200 hover:border-brand-300'
+                         }`}
+                       >
+                         <img
+                           src={image}
+                           alt={`${product.model} view ${index + 1}`}
+                           className="w-full h-full object-contain p-1"
+                         />
+                       </button>
+                     ))}
+                   </div>
+                 </div>
+               )}
                
                {/* Trust Badges Grid */}
                <div className="relative z-10 grid grid-cols-3 gap-4 mt-8">
                    <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm text-center hover:shadow-md transition-shadow">
-                      <div className="w-8 h-8 mx-auto bg-brand-50 rounded-full flex items-center justify-center text-brand-500 mb-2">
-                          <ShieldCheck className="w-4 h-4" />
-                      </div>
-                      <span className="text-[10px] sm:text-xs text-slate-900 font-bold block">Warranty</span>
+                       <div className="w-8 h-8 mx-auto bg-brand-50 rounded-full flex items-center justify-center text-brand-500 mb-2">
+                           <ShieldCheck className="w-4 h-4" />
+                       </div>
+                       <span className="text-[10px] sm:text-xs text-slate-900 font-bold block">Warranty</span>
                    </div>
                    <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm text-center hover:shadow-md transition-shadow">
-                      <div className="w-8 h-8 mx-auto bg-brand-50 rounded-full flex items-center justify-center text-brand-500 mb-2">
-                          <Truck className="w-4 h-4" />
-                      </div>
-                      <span className="text-[10px] sm:text-xs text-slate-900 font-bold block">Delivery</span>
+                       <div className="w-8 h-8 mx-auto bg-brand-50 rounded-full flex items-center justify-center text-brand-500 mb-2">
+                           <Truck className="w-4 h-4" />
+                       </div>
+                       <span className="text-[10px] sm:text-xs text-slate-900 font-bold block">Delivery</span>
                    </div>
                    <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm text-center hover:shadow-md transition-shadow">
-                      <div className="w-8 h-8 mx-auto bg-brand-50 rounded-full flex items-center justify-center text-brand-500 mb-2">
-                          <FileText className="w-4 h-4" />
-                      </div>
-                      <span className="text-[10px] sm:text-xs text-slate-900 font-bold block">Certified</span>
+                       <div className="w-8 h-8 mx-auto bg-brand-50 rounded-full flex items-center justify-center text-brand-500 mb-2">
+                           <FileText className="w-4 h-4" />
+                       </div>
+                       <span className="text-[10px] sm:text-xs text-slate-900 font-bold block">Certified</span>
                    </div>
                </div>
             </div>

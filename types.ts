@@ -8,7 +8,7 @@ export interface Product {
   shortDescription: string; // For card view
   fullDescription?: string; // For detail view (optional, falls back to short)
   features: string[];
-  imageUrl: string;
+  images: string[]; // Array of image paths from assets folder
 }
 
 export interface Category {

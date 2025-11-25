@@ -1,6 +1,8 @@
-import React from 'react';
-import { Truck, PenTool, Activity, PhoneCall, Settings } from 'lucide-react';
-import { Product, Category, TeamMember, Service } from './types';
+import { Activity, PenTool, PhoneCall, Settings, Truck } from 'lucide-react';
+import { Category, Product, Service, TeamMember } from './types';
+import { loadProductImages } from './utils/imageLoader';
+
+
 
 export const COMPANY_INFO = {
   name: "Habash Med",
@@ -69,7 +71,7 @@ export const PRODUCTS: Product[] = [
     category: 'Refraction & Optometry',
     shortDescription: 'Advanced auto ref-keratometer with 3D tracking.',
     features: ['3D/2D semi‑auto tracking', 'Dry eye pre‑diagnosis', '8" wide LCD monitor', 'Multifunctional capabilities'],
-    imageUrl: 'https://picsum.photos/seed/prk9000/500/400'
+    images: loadProductImages('prk-9000')
   },
   {
     id: 'prk-8000',
@@ -78,7 +80,7 @@ export const PRODUCTS: Product[] = [
     category: 'Refraction & Optometry',
     shortDescription: 'High-speed measurement with pupil tracking.',
     features: ['Semi‑auto pupil tracking', 'World‑leading measurement speed', 'User‑oriented tilting & swivel monitor', 'Wider measurement range'],
-    imageUrl: 'https://picsum.photos/seed/prk8000/500/400'
+    images: loadProductImages('prk-8000')
   },
   {
     id: 'prk-7000',
@@ -87,7 +89,7 @@ export const PRODUCTS: Product[] = [
     category: 'Refraction & Optometry',
     shortDescription: 'Stable performance and user-friendly design.',
     features: ['Stable and accurate performance', 'Convenient measurement', 'Various functions', 'User‑friendly design'],
-    imageUrl: 'https://picsum.photos/seed/prk7000/500/400'
+    images: loadProductImages('prk-7000')
   },
   {
     id: 'fr-900',
@@ -96,7 +98,7 @@ export const PRODUCTS: Product[] = [
     category: 'Refraction & Optometry',
     shortDescription: 'Reliable auto ref-keratometer for daily practice.',
     features: ['Accurate refractive measurement', 'Ergonomic joystick control', 'Quick thermal printing', 'Clear interface'],
-    imageUrl: 'https://picsum.photos/seed/fr900/500/400'
+    images: loadProductImages('fr-900')
   },
   
   // Digital Refractor / Phoropter
@@ -107,7 +109,7 @@ export const PRODUCTS: Product[] = [
     category: 'Refraction & Optometry',
     shortDescription: 'Compact digital refractor with powerful optometry performance.',
     features: ['Precise and diverse tests', 'System networking capability', 'Fast lens switching speed', 'Convenient control board'],
-    imageUrl: 'https://picsum.photos/seed/pdr7000/500/400'
+    images: loadProductImages('pdr-7000')
   },
   {
     id: 'ml-400',
@@ -116,7 +118,7 @@ export const PRODUCTS: Product[] = [
     category: 'Refraction & Optometry',
     shortDescription: 'Elegant butterfly-shaped manual phoropter.',
     features: ['Butterfly‑shaped design', 'Checks multiple visual functions', 'Precise measurement', 'Comfortable operation'],
-    imageUrl: 'https://picsum.photos/seed/ml400/500/400'
+    images: loadProductImages('ml-400')
   },
 
   // Charts & Projectors
@@ -127,7 +129,7 @@ export const PRODUCTS: Product[] = [
     category: 'Refraction & Optometry',
     shortDescription: 'Refined auto chart projector.',
     features: ['Greater convenience', 'Refined design', 'Compact size', 'Diversified charts'],
-    imageUrl: 'https://picsum.photos/seed/pacp8000/500/400'
+    images: loadProductImages('pacp-8000')
   },
   {
     id: 'plc-9000',
@@ -136,7 +138,7 @@ export const PRODUCTS: Product[] = [
     category: 'Refraction & Optometry',
     shortDescription: 'LCD Chart with Wi-Fi connection.',
     features: ['Convenient Wi‑Fi connection', 'User‑customised font updates', 'Wide range of visual acuity test charts'],
-    imageUrl: 'https://picsum.photos/seed/plc9000/500/400'
+    images: loadProductImages('plc-9000')
   },
   {
     id: 'ml-vft23',
@@ -145,7 +147,7 @@ export const PRODUCTS: Product[] = [
     category: 'Refraction & Optometry',
     shortDescription: 'LCD Acuity Chart for vision screening.',
     features: ['Quick test function', 'Supports vision screening for low vision', 'Multiple chart types (Common, V‑type, ETDRS)'],
-    imageUrl: 'https://picsum.photos/seed/mlvft23/500/400'
+    images: loadProductImages('ml-vft23')
   },
 
   // Lensmeters
@@ -156,7 +158,7 @@ export const PRODUCTS: Product[] = [
     category: 'Laboratory & Lens',
     shortDescription: 'Auto lensmeter with Hartmann sensor.',
     features: ['Hartmann wavefront sensor', 'UV/blue‑light transmittance measurement', 'Automatic lens detection mode', 'Wi‑Fi–based wireless network'],
-    imageUrl: 'https://picsum.photos/seed/plm8000/500/400'
+    images: loadProductImages('plm-8000(pd)')
   },
   
   // Slit Lamps & Imaging
@@ -167,7 +169,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diagnostic Imaging',
     shortDescription: 'High optical resolution slit lamp.',
     features: ['LED illumination', 'Flexible joystick', 'UV filter design', 'High optical resolution (2800·N lp/mm)'],
-    imageUrl: 'https://picsum.photos/seed/ml350a/500/400'
+    images: loadProductImages('ml-350a')
   },
   {
     id: 'ml-350a-ccd',
@@ -176,7 +178,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diagnostic Imaging',
     shortDescription: 'Digital slit lamp with camera integration.',
     features: ['Digital slit lamp microscope', 'Camera integration (Canon EOS or Nikon DSLR)', 'Data‑synchronisation transmission', 'High clarity optics'],
-    imageUrl: 'https://picsum.photos/seed/ml350accd/500/400'
+    images: loadProductImages('ml-350a ccd')
   },
   
   // Fundus Cameras
@@ -187,7 +189,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diagnostic Imaging',
     shortDescription: 'Portable hand-held fundus camera.',
     features: ['Portable design', 'Quick retinal examinations', 'High resolution imaging', 'Easy data transfer'],
-    imageUrl: 'https://picsum.photos/seed/cfcx/500/400'
+    images: loadProductImages('cfc-x')
   },
   {
     id: 'cfc-ai',
@@ -196,6 +198,7 @@ export const PRODUCTS: Product[] = [
     category: 'Diagnostic Imaging',
     shortDescription: 'Automatic fundus camera with AI.',
     features: ['Fully automated operation', 'AI‑assisted image processing', 'Automatic tracking and focusing', 'Comprehensive retinal analysis'],
-    imageUrl: 'https://picsum.photos/seed/cfcai/500/400'
+    images: loadProductImages('cfc-ai')
   },
 ];
+
