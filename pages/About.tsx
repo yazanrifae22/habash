@@ -1,5 +1,6 @@
 import { Activity, Eye, Heart, Shield, Target } from 'lucide-react';
 import React from 'react';
+import ourStoryImg from '/src/assets/our-story/our-story.png';
 
 const About: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const About: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
             <img 
-              src="https://picsum.photos/seed/surgery/800/600" 
+              src={ourStoryImg}
               alt="Modern Eye Clinic" 
               className="rounded-2xl shadow-xl"
             />

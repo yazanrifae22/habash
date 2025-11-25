@@ -55,11 +55,17 @@ export const SERVICES: Service[] = [
   },
 ];
 
+// Import category images
+import furnitureImg from '/src/assets/categories/Clinic Furniture.png';
+import diagnosisImg from '/src/assets/categories/Diagnostic Imaging.png';
+import labImg from '/src/assets/categories/Laboratory & Lens.png';
+import refractionImg from '/src/assets/categories/Refraction & Optometry.png';
+
 export const CATEGORIES: Category[] = [
-  { id: 'refraction', name: 'Refraction & Optometry', imageUrl: 'https://picsum.photos/seed/refraction/600/400', description: 'High-precision auto-refractors and digital charts.' },
-  { id: 'diagnosis', name: 'Diagnostic Imaging', imageUrl: 'https://picsum.photos/seed/diagnosis/600/400', description: 'Slit lamps, fundus cameras, and microscopes.' },
-  { id: 'furniture', name: 'Clinic Furniture', imageUrl: 'https://picsum.photos/seed/furniture/600/400', description: 'Electric tables and ergonomic units.' },
-  { id: 'lab', name: 'Laboratory & Lens', imageUrl: 'https://picsum.photos/seed/lab/600/400', description: 'Auto lensmeters and finishing equipment.' },
+  { id: 'refraction', name: 'Refraction & Optometry', imageUrl: refractionImg, description: 'High-precision auto-refractors and digital charts.' },
+  { id: 'diagnosis', name: 'Diagnostic Imaging', imageUrl: diagnosisImg, description: 'Slit lamps, fundus cameras, and microscopes.' },
+  { id: 'furniture', name: 'Clinic Furniture', imageUrl: furnitureImg, description: 'Electric tables and ergonomic units.' },
+  { id: 'lab', name: 'Laboratory & Lens', imageUrl: labImg, description: 'Auto lensmeters and finishing equipment.' },
 ];
 
 export const PRODUCTS: Product[] = [
