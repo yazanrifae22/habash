@@ -1,0 +1,16 @@
+name = "habash-api"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+account_id = "d265a7c62889180cda639a31369117ef"
+
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "habash-images"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "habash-db"
+database_id = "a70b0696-c218-465b-8d04-802a9f203943"
+
+[vars]
+R2_PUBLIC_URL = "https://pub-715504ca6c6449d58e03b068d0262f44.r2.dev"
